@@ -1,29 +1,36 @@
-// On the basis of how data is stored and access from memory.
+/*
+On the basis of how data is stored and accessed from memory.
 
-// Primitive: Call by value (memory ref not given)
-// 7 Types: String, Number, Boolean, Null, undefined, Symbol, BigInt
+PRIMITIVE: Call by value (memory reference is not given)
+7 Types: String, Number, Boolean, Null, undefined, Symbol, BigInt
 
-const score = 123
-const scoreValue = 123.42
+Symbol used to make something unique.
+BigInt used for Very large values. 
+*/
 
-const isLoggedIn = true
-const outsideTemp = null
-let userEmail;
+const score = 123 // Number
+const scoreValue = 123.42 // Also a Number
 
-const id = Symbol('123')
-const anotherId = Symbol('123')
+const isLoggedIn = true // Boolean
+const outsideTemp = null // Completly empty, not zero.
+let userEmail; // undefined
 
-console.log(id === anotherId)
+// SYMBOLS
+const id = Symbol('123') 
+const anotherId = Symbol('123') // not same as above
+console.log(id === anotherId) // F
 
-const bigNumber = 9995493499649499n
+// BigInt
+const bigNumber = 99954934996890248923449499n
 
 
-// Non-Primitive or Reference
+// NON-PRIMITIVE or REFERENCE
 // Array, Objects, Functions
 
-const heroes = ["asdc", "adsd", "adsd"] //array
+// ARRAY
+const heroes = ["asdc", "adsd", "adsd"] 
 
-// object
+// OBJECT
 let myObj = {
     name: "nakul",
     age: 22,
@@ -36,6 +43,8 @@ const myFunction = function (){
 
 console.log(typeof myObj)
 
-// JS is dyanmically typed language. 
-// Type checking is done at runtime, and variables can hold values of different types
-// You do not need to declare the data type of a variable explicitly in JavaScript
+/*
+JS is DYANMICALLY typed language. 
+Type checking is done at runtime, and variables can hold values of different types.
+You do not need to declare the data type of a variable explicitly in JavaScript.
+*/

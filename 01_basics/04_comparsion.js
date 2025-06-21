@@ -1,22 +1,22 @@
-// console.log(2 > 1);
-// console.log(2 >= 1);
-// console.log(2 <= 1);
-// console.log(2 == 1);
-// console.log(2 != 1);
+// Basic comparsion of same datatypes
+console.log(2 > 1);  // T
+console.log(2 >= 1); // T
+console.log(2 <= 1); // F
+console.log(2 == 1); // F
+console.log(2 != 1); // T
 
-// AVOID SUCH COMPARSIONS
+// AVOID THESE COMPARSIONS
+console.log("2" > 1); // T
+console.log("02" > 1); // T
 
-// console.log("2" > 1);
-// console.log("02" > 1);
+// Null converted to 0
+console.log(null > 0); // F
+console.log(null == 0);  // T 
+console.log(null >= 0); // F
 
-// console.log(null > 0); // F
-// console.log(null == 0);  // T
-// console.log(null >= 0); // F
+console.log(undefined == 0); // F
+console.log(undefined > 0); // F
+console.log(undefined < 0); // F
 
-// console.log(undefined == 0); // F
-// console.log(undefined > 0); // F
-// console.log(undefined < 0); // F
-
-// === STRICT CHECK
-
-console.log("2" === 2);
+// === --> STRICT CHECK (checks value & datatypes both)
+console.log("2" === 2); // F
