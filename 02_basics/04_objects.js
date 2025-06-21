@@ -1,4 +1,7 @@
+// constructor
 // const instaUser = new Object() // Singleton object
+
+// literal
 const instaUser = {} // Non-Singleton object
 
 instaUser.id = "123abc"
@@ -18,6 +21,10 @@ const regularUser = {
 }
 
 console.log(regularUser.fullname.firstname);
+
+// to skip any missing middle object 
+console.log(regularUser?.fullname?.userfullname?.firstname)
+
 
 const obj1 = {1 : "a", 2 : "b"}
 const obj2 = {3 : "a", 4 : "b"}
