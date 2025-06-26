@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>DOM Learning</title>
+        <style>
+            .bg-black {
+                background-color: #111111;
+                color: whitesmoke;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-black"></body>
+    <script>
+        // div is arbitrary variable name, here
+        const div = document.createElement("div");
+        console.log(div);
+        // <div></div>
+
+        div.className = "main";
+        // random id to the div element
+        div.id = Math.round(Math.random() * 10 + 1);
+
+        // setAttribute to the div
+        div.setAttribute("title", "some title");
+
+        // styling the div
+        div.style.backgroundColor = "green";
+        div.style.padding = "16px";
+        div.style.borderRadius = "12px";
+
+        // div.innerText assigns text directly. Overwrites existing content.
+        // Less efficient than createTextNode + appendChild in complex DOM ops.
+
+        // document.createTextNode -> create new text node, then append it.
+        const addText = document.createTextNode("Text in the div");
+        div.appendChild(addText);
+
+        // add the div to the document, till now it was in memory
+        document.body.appendChild(div);
+
+        // This logic can be wrapped into a function to dynamically create multiple divs from an array.
+    </script>
+</html>
